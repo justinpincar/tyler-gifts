@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @trait.name
+
+= link_to 'Edit', edit_trait_path(@trait)
+'|
+= link_to 'Back', traits_path

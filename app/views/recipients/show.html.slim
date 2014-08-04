@@ -1,0 +1,19 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @recipient.name
+p
+  strong Age:
+  = @recipient.age
+p
+  strong Gender:
+  = @recipient.gender
+p
+  strong Traits:
+  = @recipient.traits.collect(&:name)
+
+= link_to 'Edit', edit_recipient_path(@recipient)
+'|
+= link_to 'Back', recipients_path
+

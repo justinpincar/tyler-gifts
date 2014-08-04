@@ -1,0 +1,28 @@
+h1 Listing recipients
+
+table
+  thead
+    tr
+      th Name
+      th Age
+      th Gender
+      th Traits
+      th
+      th
+      th
+
+  tbody
+    - @recipients.each do |recipient|
+      tr
+        td = recipient.name
+        td = recipient.age
+        td = recipient.gender
+        td = recipient.traits.collect(&:name)
+        td = link_to 'Show', recipient
+        td = link_to 'Edit', edit_recipient_path(recipient)
+        td = link_to 'Destroy', recipient, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Recipient', new_recipient_path
+

@@ -1,0 +1,21 @@
+h1 Listing traits
+
+table
+  thead
+    tr
+      th Name
+      th
+      th
+      th
+
+  tbody
+    - @traits.each do |trait|
+      tr
+        td = trait.name
+        td = link_to 'Show', trait
+        td = link_to 'Edit', edit_trait_path(trait)
+        td = link_to 'Destroy', trait, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Trait', new_trait_path
