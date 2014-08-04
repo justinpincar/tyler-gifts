@@ -12,6 +12,7 @@ gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
 group :production do
+  gem 'rails_12factor'
   gem 'pg'
 end
 
